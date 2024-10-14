@@ -1,10 +1,14 @@
-import Image from "next/image";
+import FooterComponent from "@/components/footer/FooterComponent";
+import NavbarComponent from "@/components/navbar/NavbarComponent";
 
 export default function Home() {
   return (
-<div>
-  home
-</div>
-    
+    <>
+      <NavbarComponent />
+      <div>
+        home
+      </div>
+      <FooterComponent />
+    </>
   );
 }
