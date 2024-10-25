@@ -5,12 +5,12 @@ import Link from "next/link";
 
 const FooterComponent = () => {
   return (
-    <footer className="bg-light-background dark:bg-dark-background py-8 mt-auto">
+    <footer className="mt-24 h-auto py-8">
       <div className="container mx-auto px-6">
         {/* Footer Sections */}
         <div className="flex flex-wrap justify-between">
           {/* Support Section */}
-          <div className="w-full sm:w-1/2 md:w-1/3 mb-4 md:mb-0 text-light-foreground dark:text-dark-foreground">
+          <div className="w-full sm:w-1/2 md:w-1/3 mb-4 md:mb-0">
             <h4 className="text-lg font-semibold mb-2">Support</h4>
             <p>
               If you need any help, feel free to reach out to our technical
@@ -26,7 +26,7 @@ const FooterComponent = () => {
           </div>
 
           {/* Legal Section */}
-          <div className="w-full sm:w-1/2 md:w-1/3 mb-4 md:mb-0 text-light-foreground dark:text-dark-foreground">
+          <div className="w-full sm:w-1/2 md:w-1/3 mb-4 md:mb-0">
             <h4 className="text-lg font-semibold mb-2">Legal</h4>
             <ul className="space-y-2">
               <li>
@@ -43,7 +43,7 @@ const FooterComponent = () => {
           </div>
 
           {/* Quick Links Section */}
-          <div className="w-full sm:w-1/2 md:w-1/3 text-light-foreground dark:text-dark-foreground">
+          <div className="w-full sm:w-1/2 md:w-1/3">
             <h4 className="text-lg font-semibold mb-2">Quick Links</h4>
             <ul className="space-y-2">
               <li>
@@ -71,7 +71,7 @@ const FooterComponent = () => {
         </div>
 
         {/* Copyright Section */}
-        <div className="mt-8 text-center text-gray-600 dark:text-gray-400">
+        <div className="mt-8 text-center text-gray-400">
           <p>
             &copy; {new Date().getFullYear()} Ideathon
           </p>
