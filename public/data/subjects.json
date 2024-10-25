@@ -1,0 +1,63 @@
+{
+    "CSE": {
+      "Semester 1": ["Mathematics I", "Physics", "Introduction to Programming", "English", "Workshop"],
+      "Semester 2": ["Mathematics II", "Data Structures", "Digital Logic", "Discrete Mathematics", "Environmental Studies"],
+      "Semester 3": ["Algorithms", "Computer Architecture", "Operating Systems", "Database Systems", "Software Engineering"],
+      "Semester 4": ["Computer Networks", "Theory of Computation", "Compiler Design", "Artificial Intelligence", "Machine Learning"],
+      "Semester 5": ["Software Testing", "Cloud Computing", "Big Data", "Data Mining", "Mobile Computing"],
+      "Semester 6": ["Internet of Things", "Cyber Security", "Blockchain Technology", "Deep Learning", "Natural Language Processing"],
+      "Semester 7": ["Distributed Systems", "Quantum Computing", "Augmented Reality", "Virtual Reality", "Human-Computer Interaction"],
+      "Semester 8": ["Project Management", "Information Retrieval", "Digital Forensics", "Ethics in IT", "Project"]
+    },
+    "IT": {
+      "Semester 1": ["Mathematics I", "Physics", "Introduction to Programming", "English", "Workshop"],
+      "Semester 2": ["Mathematics II", "Data Structures", "Digital Logic", "Discrete Mathematics", "Communication Skills"],
+      "Semester 3": ["Web Technologies", "Computer Networks", "Operating Systems", "Database Systems", "Software Engineering"],
+      "Semester 4": ["Mobile Application Development", "Theory of Computation", "Cyber Security", "Cloud Computing", "Artificial Intelligence"],
+      "Semester 5": ["Data Analytics", "Data Mining", "Software Testing", "Blockchain Technology", "Big Data"],
+      "Semester 6": ["Internet of Things", "Machine Learning", "Deep Learning", "Network Security", "Web Security"],
+      "Semester 7": ["Distributed Systems", "Quantum Computing", "Augmented Reality", "Virtual Reality", "Human-Computer Interaction"],
+      "Semester 8": ["Project Management", "Ethics in IT", "Digital Forensics", "Entrepreneurship Development", "Project"]
+    },
+    "ECE": {
+      "Semester 1": ["Mathematics I", "Physics", "Basic Electronics", "English", "Workshop"],
+      "Semester 2": ["Mathematics II", "Signals and Systems", "Digital Electronics", "Network Theory", "Communication Systems"],
+      "Semester 3": ["Microprocessors", "Electromagnetics", "Control Systems", "VLSI Design", "Analog Circuits"],
+      "Semester 4": ["Digital Signal Processing", "Antenna Theory", "Embedded Systems", "Microwave Engineering", "Fiber Optics"],
+      "Semester 5": ["Wireless Communication", "Optoelectronics", "Robotics", "Digital Image Processing", "Radar Systems"],
+      "Semester 6": ["Satellite Communication", "Nanoelectronics", "Internet of Things", "Machine Learning", "RF Design"],
+      "Semester 7": ["Signal Integrity", "Quantum Electronics", "Advanced VLSI Design", "MEMS", "Digital System Design"],
+      "Semester 8": ["Project Management", "Nano Photonics", "Biomedical Instrumentation", "Ethics in Electronics", "Project"]
+    },
+    "EE": {
+      "Semester 1": ["Mathematics I", "Physics", "Basic Electrical Engineering", "English", "Workshop"],
+      "Semester 2": ["Mathematics II", "Electrical Circuits", "Electromagnetics", "Digital Logic", "Electrical Machines I"],
+      "Semester 3": ["Power Systems", "Electrical Machines II", "Control Systems", "Power Electronics", "Analog Circuits"],
+      "Semester 4": ["Power Transmission", "Renewable Energy Systems", "Electrical Drives", "Digital Signal Processing", "High Voltage Engineering"],
+      "Semester 5": ["Smart Grids", "Energy Management", "Electrical Safety", "Industrial Automation", "Embedded Systems"],
+      "Semester 6": ["Electric Vehicles", "Microgrids", "Power Quality", "Machine Learning in Power Systems", "SCADA Systems"],
+      "Semester 7": ["Power System Protection", "HVDC Transmission", "Advanced Control Systems", "Digital Control", "Renewable Energy Technologies"],
+      "Semester 8": ["Project Management", "Energy Storage Systems", "Electrical Instrumentation", "Ethics in Engineering", "Project"]
+    },
+    "MECH": {
+      "Semester 1": ["Mathematics I", "Physics", "Engineering Drawing", "English", "Workshop"],
+      "Semester 2": ["Mathematics II", "Mechanics of Solids", "Thermodynamics", "Manufacturing Processes", "Environmental Studies"],
+      "Semester 3": ["Fluid Mechanics", "Theory of Machines", "Heat Transfer", "Material Science", "Engineering Mechanics"],
+      "Semester 4": ["Kinematics of Machines", "Machine Design", "Manufacturing Technology", "Mechatronics", "Automobile Engineering"],
+      "Semester 5": ["Robotics", "Thermal Engineering", "CAD/CAM", "Industrial Engineering", "Energy Conservation"],
+      "Semester 6": ["Production Planning", "Control Systems", "Advanced Manufacturing", "Renewable Energy", "Operations Research"],
+      "Semester 7": ["Finite Element Analysis", "Automation", "Advanced Thermodynamics", "Biomechanics", "Design of Machine Elements"],
+      "Semester 8": ["Project Management", "Sustainable Manufacturing", "Ethics in Mechanical Engineering", "Project"]
+    },
+    "CIVIL": {
+      "Semester 1": ["Mathematics I", "Physics", "Engineering Drawing", "English", "Workshop"],
+      "Semester 2": ["Mathematics II", "Building Materials", "Surveying", "Fluid Mechanics", "Environmental Studies"],
+      "Semester 3": ["Structural Analysis", "Geotechnical Engineering", "Concrete Technology", "Transportation Engineering", "Engineering Mechanics"],
+      "Semester 4": ["Hydrology", "Irrigation Engineering", "Building Planning", "Environmental Engineering", "Soil Mechanics"],
+      "Semester 5": ["Design of Concrete Structures", "Structural Dynamics", "Foundation Engineering", "Construction Management", "Water Resources Engineering"],
+      "Semester 6": ["Advanced Structural Analysis", "Earthquake Engineering", "Steel Structures", "Urban Planning", "Geoinformatics"],
+      "Semester 7": ["Bridge Engineering", "Smart Cities", "Sustainable Construction", "Environmental Impact Assessment", "Remote Sensing"],
+      "Semester 8": ["Project Management", "Ethics in Civil Engineering", "Green Building Technology", "Project"]
+    }
+  }
+  
