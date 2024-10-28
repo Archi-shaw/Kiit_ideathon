@@ -1,39 +1,11 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import BranchCard from '../../components/branchCard/BranchCard';
-
-
-
-const branches = [
-  { name: 'CSE', icon: "images/cse.jpg"},
-  { name: 'IT', icon: '/icons/it-icon.png' },
-  { name: 'ECE', icon: '/icons/ece-icon.png' },
-  { name: 'ME', icon: '/icons/me-icon.png' },
-  { name: 'EE', icon: '/icons/ee-icon.png' }
-];
-
-const ResourcesPage = () => {
-  return (
-    <div className="min-h-screen bg-[#ECDFCC] py-10">
-      <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold text-center mb-8 text-zinc-950">Select Your Branch</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {branches.map((branch) => (
-            <BranchCard key={branch.name} branchName={branch.name} icon={branch.icon} />
-          ))}
-        </div>
-      </div>
-=======
 "use client";
 
 import { useState, useEffect } from "react";
 
 const Resources = () => {
-  // State to store selected branch and semester
   const [selectedBranch, setSelectedBranch] = useState(null);
   const [selectedSemester, setSelectedSemester] = useState(null);
-  const [subjects, setSubjects] = useState(null); // State to store subjects
+  const [subjects, setSubjects] = useState(null);
 
   useEffect(() => {
     fetch("/data/subjects.json")
@@ -60,55 +32,62 @@ const Resources = () => {
   ];
 
   return (
-    <div className="h-[40vw] mt-8 flex flex-col items-center justify-center bg-[#101010]">
-      <h1 className="font-bold text-3xl">Select Your Branch</h1>
+    <div className="h-full mt-8 flex flex-col items-center justify-center bg-[#101010] p-4">
+      <h1 className="font-bold text-xl lg:text-2xl text-center mb-4">
+        Select Your Branch
+      </h1>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 w-full m-2 p-2 cursor-pointer">
+      {/* Branch Selection */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full max-w-lg">
         {branches.map((branch) => (
           <div
             key={branch}
-            className="bg-transparent text-primary border border-primary h-12 rounded-md font-bold flex items-center justify-center shadow-md transition-all duration-300 ease-in-out transform hover:bg-accent hover:scale-105 hover:shadow-xl"
+            className="text-white border border-primary rounded-lg p-4 h-32 font-bold flex flex-col items-center justify-center shadow-md transition-all duration-300 ease-in-out transform hover:bg-accent hover:scale-105 hover:shadow-xl cursor-pointer"
             onClick={() => {
               setSelectedBranch(branch);
               setSelectedSemester(null);
-            }} // Reset semester on branch selection
+            }}
           >
-            {branch}
+            <img
+              src={`/images/${branch.toLowerCase()}.jpg`}
+              alt={`${branch} logo`}
+              className="w-fit h-full mb-2 object-fit"
+            />
+            <span>{branch}</span>
           </div>
         ))}
       </div>
 
-      {/* Conditionally render semester section only if a branch is selected */}
+      {/* Semester Selection */}
       {selectedBranch && (
-        <>
-          <h1 className="font-bold text-2xl mt-4">
+        <div className="mt-8 w-full max-w-md text-center">
+          <h1 className="font-bold text-xl lg:text-2xl mb-4">
             Select Your Semester for {selectedBranch}
           </h1>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-2 w-full m-2 p-2 cursor-pointer">
+          <div className="grid grid-cols-2 gap-3">
             {semesters.map((semester) => (
               <div
                 key={semester}
-                className="h-12 rounded-md font-bold flex items-center justify-center shadow-md
-                           transition-all duration-300 ease-in-out transform hover:bg-accent hover:scale-105 hover:shadow-xl bg-transparent text-primary border border-primary"
+                className="h-12 text-md rounded-md font-bold flex items-center justify-center shadow-md transition-all duration-300 ease-in-out transform hover:bg-accent hover:scale-105 hover:shadow-xl text-white border border-primary cursor-pointer"
                 onClick={() => setSelectedSemester(semester)}
               >
                 {semester}
               </div>
             ))}
           </div>
-        </>
+        </div>
       )}
 
-      {/* Conditionally render subjects section only if both branch and semester are selected */}
+      {/* Subjects Section */}
       {selectedBranch && selectedSemester && subjects && (
-        <div className="mt-6 w-full">
-          <h1 className="mx-10 font-bold text-2xl">
+        <div className="mt-6 w-full h-full max-w-md text-center">
+          <h1 className="font-bold text-xl mb-4">
             Subjects for {selectedBranch} - {selectedSemester}
           </h1>
-          <ul className="list-disc ml-16 mt-2">
+          <ul className="list-disc ml-4 text-left">
             {subjects[selectedBranch][selectedSemester].map(
               (subject, index) => (
-                <li key={index} className="my-2">
+                <li key={index} className="my-1 text-md">
                   {subject}
                 </li>
               )
@@ -116,13 +95,8 @@ const Resources = () => {
           </ul>
         </div>
       )}
->>>>>>> 7f46447206d724507539315b9121d2b51b5dfa89
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default ResourcesPage;
-=======
 export default Resources;
->>>>>>> 7f46447206d724507539315b9121d2b51b5dfa89

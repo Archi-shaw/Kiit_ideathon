@@ -65,7 +65,7 @@ export default function FooterComponent() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact" className="hover:underline">
+                    <Link href="/about/#contact" className="hover:underline">
                       Contact
                     </Link>
                   </li>

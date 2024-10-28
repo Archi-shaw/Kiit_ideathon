@@ -54,7 +54,7 @@ const Page = () => {
           Alumni Network ensures that support and opportunity are never far away
         </span>
       </div>
-      <div className="relative mt-4 border-t-1 p-6">
+      <div className="relative mt-4 border-t-1 p-6" id="contact">
         <h2 className="text-2xl font-bold text-center mb-2">Contact Us</h2>
         <p className="text-center text-lg mb-4">
           Have questions or need help? Feel free to reach out!

@@ -7,19 +7,19 @@ const slides = [
     id: 1,
     title: 'Welcome to Our Platform',
     description: 'Connecting students and alumni seamlessly.',
-    image: '/images/cse.jpg',
+    image: 'assests/alumni_pic_5.jpg',
   },
   {
     id: 2,
     title: 'Explore Resources',
     description: 'Get access to curated subject-wise resources.',
-    image: '/images/IT.jpg',
+    image: '/images/cse.jpg',
   },
   {
     id: 3,
     title: 'Join the Community',
     description: 'Network with alumni and peers in your field.',
-    image: '/images/cse.jpg',
+    image: '/assests/alumni_pic_1.jpg',
   },
 ];
 
