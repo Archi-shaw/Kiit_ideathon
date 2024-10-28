@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <div className="z-30 relative font-poppins">
       <nav
-        className="flex justify-between items-center p-4 shadow-lg shadow-[#a7f000] z-40 relative bg-black lg:px-10"
+        className="flex justify-between items-center p-4 shadow-lg shadow-[#a7f000] z-40 relative bg-black lg:px-10 "
         style={{ boxShadow: "0px 4px 6px rgba(167, 240, 0, 0.2)" }}
       >
         <div className="flex flex-row gap-2">
