@@ -1,8 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/system";
-import NavbarComponent from "@/components/navbar/NavbarComponent";
-import FooterComponent from "@/components/footer/FooterComponent";
+import Navbar from "../components/navbar/NavbarComponent";
+import Footer from "../components/footer/FooterComponent";
 // import Header from "@/components/navbar/Header";
 
 const geistSans = localFont({
@@ -29,9 +29,9 @@ export default function RootLayout({ children }) {
       >
         <NextUIProvider>
           {/* <Header/> */}
-          <NavbarComponent />
+          <Navbar />
           {children}
-          <FooterComponent />
+          <Footer />
         </NextUIProvider>
       </body>
     </html>

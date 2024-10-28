@@ -33,14 +33,14 @@ const Resources = () => {
   ];
 
   return (
-    <div className="h-full mt-8 flex flex-col items-center justify-center bg-[#101010]">
+    <div className="h-[40vw] mt-8 flex flex-col items-center justify-center bg-[#101010]">
       <h1 className="font-bold text-3xl">Select Your Branch</h1>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 w-full m-2 p-2 cursor-pointer">
         {branches.map((branch) => (
           <div
             key={branch}
-            className="bg-primary text-black h-12 rounded-md font-bold flex items-center justify-center shadow-md transition-all duration-300 ease-in-out transform hover:bg-accent hover:scale-105 hover:shadow-xl"
+            className="bg-transparent text-primary border border-primary h-12 rounded-md font-bold flex items-center justify-center shadow-md transition-all duration-300 ease-in-out transform hover:bg-accent hover:scale-105 hover:shadow-xl"
             onClick={() => {
               setSelectedBranch(branch);
               setSelectedSemester(null);
@@ -62,7 +62,7 @@ const Resources = () => {
               <div
                 key={semester}
                 className="h-12 rounded-md font-bold flex items-center justify-center shadow-md
-                           transition-all duration-300 ease-in-out transform hover:bg-accent hover:scale-105 hover:shadow-xl bg-primary text-black"
+                           transition-all duration-300 ease-in-out transform hover:bg-accent hover:scale-105 hover:shadow-xl bg-transparent text-primary border border-primary"
                 onClick={() => setSelectedSemester(semester)}
               >
                 {semester}
