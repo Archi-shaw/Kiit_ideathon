@@ -1,18 +1,15 @@
-// components/BranchCard.jsx
 import React from 'react';
 import Link from 'next/link';
 
 const BranchCard = ({ branchName, icon }) => {
   return (
     <Link href={`/semester/${branchName}`}>
-    <div className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      <div className="p-6 flex items-center flex-col">
-        <div className="mb-4">
-          <img src={icon} alt={`${branchName} icon`} className="h-16 w-16" />
+      <div className="transition-transform transform hover:scale-105 duration-300 shadow-lg hover:shadow-2xl border rounded-lg overflow-hidden cursor-pointer p-4 text-center">
+        <div className="mb-3">
+          <img src={icon} alt={`${branchName} icon`} className="h-20 w-20 mx-auto" />
         </div>
-        <h3 className="text-lg font-semibold text-gray-800">{branchName}</h3>
+        <h3 className="text-xl font-semibold text-green-400">{branchName}</h3>
       </div>
-    </div>
     </Link>
   );
 };

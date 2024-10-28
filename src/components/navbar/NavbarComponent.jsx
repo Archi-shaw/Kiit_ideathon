@@ -22,7 +22,7 @@ export default function Navbar() {
     <div className="z-30 relative font-poppins">
       <nav
         className="flex justify-between items-center p-4 shadow-lg shadow-[#a7f000] z-40 relative bg-black lg:px-10 "
-        style={{ boxShadow: "0px 4px 6px rgba(167, 240, 0, 0.2)" }}
+        style={{ boxShadow: "0px 4px 6px rgba(167, 240, 0, 0.12)" }}
       >
         <div className="flex flex-row gap-2">
           <Image src="/icons/kiit-logo.png" width={45} height={40} alt="logo" />
@@ -56,7 +56,7 @@ export default function Navbar() {
             Chats
           </Link>
           <Link
-            href="/contact"
+            href="/about/#contact"
             className="hover:scale-110 hover:text-[#a7f000] transition-all"
           >
             Contact
