@@ -11,20 +11,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Light Mode Colors
-        light: {
-          background: "#ECDFCC", // light background
-          foreground: "#3C3D37", // light foreground
-          accent: "#697565",     // light accent color
-          primary: "#1E201E",    // light primary color
-        },
-        // Dark Mode Colors
-        dark: {
-          background: "#1E201E", // dark background
-          foreground: "#ECDFCC", // dark foreground (light contrast)
-          accent: "#697565",     // dark accent color
-          primary: "#3C3D37",    // dark primary color
-        },
+        background: "ffffff",
+        foreground: "var(--foreground)",
+        primary: "#a6f000",
+      },
+      fontFamily: {
+        bitter: ["Bitter"],
+        geist: ["Geist"],
+        geistMono: ["GeistMono"],
+        poppins: ["Poppins"],
       },
     },
   },

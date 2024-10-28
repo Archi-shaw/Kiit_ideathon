@@ -1,144 +1,142 @@
 "use client";
-
+import Link from "next/link";
 import { useState } from "react";
-import React from "react";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
-  Link,
-  Button,
-  Image,
-} from "@nextui-org/react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import ThemeToggle from "./ThemeToggle";
+import { AnimatePresence, motion } from "framer-motion";
+import HamburgerButton from "./HamburgerButton";
+import Image from "next/image";
 
-const NavbarComponent = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
-  const handleLoginLogout = () => {
-    if (isLoggedIn) {
-      toast.info("Signing out...");
-    } else {
-      toast.success("Logged in...");
-    }
-    setIsLoggedIn(!isLoggedIn);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
   };
 
-  const menuItems = ["Profile", "Dashboard", "LogOut"];
+  const variants = {
+    hidden: { opacity: 0, y: -256 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
-    <div className="w-full mx-auto h-10">
-      <Navbar
-        shouldHideOnScroll
-        onMenuOpenChange={setIsMenuOpen}
-        className="bg-light-background dark:bg-dark-background"
+    <div className="z-30 relative font-poppins">
+      <nav
+        className="flex justify-between items-center p-4 shadow-lg shadow-[#a7f000] z-40 relative bg-black lg:px-10 "
+        style={{ boxShadow: "0px 4px 6px rgba(167, 240, 0, 0.2)" }}
       >
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
-        <NavbarBrand className="flex items-center">
-          <Image
-            height={36}
-            width={36}
-            alt="kiit logo"
-            src="https://kiit.ac.in/wp-content/uploads/2022/10/KIIT-Logo-500x500-1.png"
-            className="object-fill opacity-100"
-          />
-          <p className="text-light-primary font-extrabold dark:text-dark-foreground ml-2">
-            KIIT
-          </p>
-        </NavbarBrand>
-        <NavbarItem>
+        <div className="flex flex-row gap-2">
+          <Image src="/icons/kiit-logo.png" width={45} height={40} alt="logo" />
+          <h1 className="text-3xl">
+            Alumni <span className="text-[#a7f000]">Network</span>
+          </h1>
+        </div>
+        <div className="hidden md:flex md:gap-9">
           <Link
-            color="foreground"
-            href="/Profile"
-            className="max-sm:hidden ml-72"
+            href="/"
+            className="hover:scale-110 hover:text-[#a7f000] transition-all"
           >
-            Profile
+            Home
           </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="/" className="max-sm:hidden">
-            Dashboard
+          <Link
+            href="/about"
+            className="hover:scale-110 hover:text-[#a7f000] transition-all"
+          >
+            About
           </Link>
-        </NavbarItem>
-
-        <NavbarContent className="flex justify-between w-fit max-sm:hidden">
-          <div className="flex justify-between items-center">
-            <NavbarItem>
-              {isLoggedIn ? (
-                <Button
-                  color="primary"
-                  onClick={handleLoginLogout}
-                  variant="flat"
-                  className="bg-light-primary text-white hover:bg-blue-600 hover:text-white dark:bg-dark-primary dark:text-dark-foreground dark:hover:bg-teal-600 dark:hover:text-white mr-4 relative"
-                >
-                  Sign Out
-                </Button>
-              ) : (
-                <Button
-                  color="primary"
-                  onClick={handleLoginLogout}
-                  variant="flat"
-                  className="bg-light-primary text-white hover:bg-blue-600 hover:text-white dark:bg-dark-accent dark:text-dark-foreground dark:hover:bg-teal-600 dark:hover:text-white mr-4 relative"
-                >
-                  Login
-                </Button>
-              )}
-            </NavbarItem>
-            <NavbarItem>
-              <ThemeToggle />
-            </NavbarItem>
+          <Link
+            href="/resources"
+            className="hover:scale-110 hover:text-[#a7f000] transition-all"
+          >
+            Resources
+          </Link>
+          <Link
+            href="/chat"
+            className="hover:scale-110 hover:text-[#a7f000] transition-all"
+          >
+            Chats
+          </Link>
+          <Link
+            href="/contact"
+            className="hover:scale-110 hover:text-[#a7f000] transition-all"
+          >
+            Contact
+          </Link>
+        </div>
+        <div
+          className="hidden md:block relative"
+          onMouseEnter={() => setIsHovered(!isHovered)}
+          onMouseLeave={() => setIsHovered(!isHovered)}
+        >
+          <motion.div
+            initial={{ width: "100%" }}
+            animate={isHovered ? { width: 0 } : { width: "100%" }}
+            transition={{ duration: 0.5, ease: [0.17, 0.55, 0.55, 1] }}
+            className="absolute w-full h-full bg-[#a7f000]"
+          ></motion.div>
+          <motion.button
+            transition={{ duration: 0.5, ease: [0.17, 0.55, 0.55, 1] }}
+            whileHover={{ color: "#a7f000", borderColor: "#a7f000" }}
+            className="w-full h-full relative z-10 py-2 px-5 border border-background"
+            style={{ color: "#000000" }}
+          >
+            Premium
+          </motion.button>
+        </div>
+        <div className="md:hidden flex justify-center items-center">
+          <HamburgerButton isOpen={isOpen} toggleMenu={toggleMenu} />
+        </div>
+      </nav>
+      <AnimatePresence>
+        {isOpen && (
+          <div className={`relative`}>
+            <motion.div
+              key={"hamburger"}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={variants}
+              transition={{ duration: 0.5 }}
+              className="w-full bg-black flex flex-col gap-4 p-4 md:hidden absolute"
+            >
+              <Link
+                href="/"
+                className="hover:text-lg hover:text-[#a7f000] transition-all"
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className="hover:text-lg hover:text-[#a7f000] transition-all"
+              >
+                About
+              </Link>
+              <Link
+                href="/resources"
+                className="hover:text-lg hover:text-[#a7f000] transition-all"
+              >
+                Resources
+              </Link>
+              <Link
+                href="/chat"
+                className="hover:text-lg hover:text-[#a7f000] transition-all"
+              >
+                Chats
+              </Link>
+              <Link
+                href="/contact"
+                className="hover:text-lg hover:text-[#a7f000] transition-all"
+              >
+                Contact
+              </Link>
+              <div>
+                <button className="py-2 px-5 border border-foreground hover:text-lg hover:text-[#a7f000] hover:border-[#a7f000] transition-all">
+                  Premium
+                </button>
+              </div>
+            </motion.div>
           </div>
-        </NavbarContent>
-
-        <NavbarMenu>
-          {menuItems.map((item, index) => {
-            const isLogout = item === "LogOut";
-            const href = isLogout ? "#" : `/${item}`;
-            const color =
-              index === 1 ? "primary" : isLogout ? "danger" : "foreground";
-
-            if (isLogout) {
-              return (
-                <NavbarMenuItem key={`${item}-${index}`}>
-                  <Link
-                    color={isLoggedIn ? "danger" : "foreground"}
-                    className="w-full"
-                    href="#"
-                    size="lg"
-                    onClick={handleLoginLogout}
-                  >
-                    {isLoggedIn ? "Sign Out" : "Login"}
-                  </Link>
-                  <NavbarItem>
-                    <ThemeToggle />
-                  </NavbarItem>
-                </NavbarMenuItem>
-              );
-            }
-
-            return (
-              <NavbarMenuItem key={`${item}-${index}`}>
-                <Link color={color} className="w-full" href={href} size="lg">
-                  {item}
-                </Link>
-              </NavbarMenuItem>
-            );
-          })}
-        </NavbarMenu>
-      </Navbar>
-      <ToastContainer />
+        )}
+      </AnimatePresence>
     </div>
   );
-};
-
-export default NavbarComponent;
+}
