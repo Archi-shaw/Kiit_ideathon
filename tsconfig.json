@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/chats/semester/[semesterId]/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]
