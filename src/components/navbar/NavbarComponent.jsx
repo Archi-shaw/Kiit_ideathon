@@ -50,7 +50,7 @@ export default function Navbar() {
             Resources
           </Link>
           <Link
-            href="/chat"
+            href="/chats"
             className="hover:scale-110 hover:text-[#a7f000] transition-all"
           >
             Chats
