@@ -63,13 +63,13 @@ const Carousel = () => {
       {/* Previous/Next Buttons */}
       <button
         onClick={goToPreviousSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full text-white hover:bg-opacity-75"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full text-white hover:bg-opacity-75 cursor-pointer"
       >
         &larr;
       </button>
       <button
         onClick={goToNextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full text-white hover:bg-opacity-75"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full text-white hover:bg-opacity-75 cursor-pointer"
       >
         &rarr;
       </button>
