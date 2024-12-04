@@ -14,6 +14,7 @@ module.exports = {
         background: "ffffff",
         foreground: "var(--foreground)",
         primary: "#a6f000",
+        secondary: "#a7f000",
       },
       fontFamily: {
         bitter: ["Bitter"],
